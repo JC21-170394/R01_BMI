@@ -17,5 +17,16 @@ namespace R01_BMI
         {
             InitializeComponent();
         }
+        private void Button_Clicked(object sender,EventArgs e)
+        {
+            String x = sintyou.Text;
+            String y = taijyu.Text;
+            double ww = double.Parse(x);
+            double q = double.Parse(y);
+
+            double a = q / (ww / 100 * ww / 100);
+            double aa = Math.Round(a,MidpointRounding.AwayFromZero);
+            answer.Text = "BMI:" + aa;
+        }
     }
 }
